@@ -47,9 +47,11 @@ const Services = () => {
                 <div className="">
                     <img src={treatment} className="treatment-img" alt="" />
                 </div>
-                <div className="text-black inline-block align-middle">
-                    <h1 className='font-bold text-4xl text-accent'>Exceptional Dental Care, On Your Terms</h1>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsumis that it has a more-or-less normal distribution of letters,as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page</p>
+                <div className="text-black  flex justify-center items-center ">
+                    <div className="">
+                        <h1 className='font-bold text-4xl text-accent'>Exceptional Dental Care, On Your Terms</h1>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsumis that it has a more-or-less normal distribution of letters,as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page</p>
+                    </div>
                 </div>
             </div>
 

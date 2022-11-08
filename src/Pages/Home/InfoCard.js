@@ -1,11 +1,11 @@
 import React from 'react';
-
-const InfoCard = ({ img }) => {
+import './InfoCard.css'
+const InfoCard = ({ img,cardTitle,bgClass }) => {
     return (
-        <div class="card lg:card-side bg-primary text-black shadow-xl">
-            <figure><img src={img} alt="Album" /></figure>
+<div className={`card lg:card-side bg-base-100 ${bgClass} text-white shadow-xl`}>
+            <figure className='pl-5'><img src={img} alt="Album" /></figure>
             <div class="card-body">
-                <h2 class="card-title">New album is released!</h2>
+                <h2 class="card-title">{cardTitle}</h2>
                 <p>Click the button to listen on Spotiwhy app.</p>
             </div>
         </div>

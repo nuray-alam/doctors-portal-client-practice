@@ -13,7 +13,7 @@ const Footer = () => {
                 }
             }
             className=" p-10">
-            <div className='footer text-black'>
+            <div className='footer text-black px-12'>
                 <div>
                     <span className="footer-title">Services</span>
                     <a className="link link-hover">Branding</a>

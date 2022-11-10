@@ -13,7 +13,7 @@ const Footer = () => {
                 }
             }
             className=" p-10">
-            <div className='footer'>
+            <div className='footer text-black'>
                 <div>
                     <span className="footer-title">Services</span>
                     <a className="link link-hover">Branding</a>
@@ -35,7 +35,7 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </div>
             </div>
-            <div className='my-10 text-center'>
+            <div className='my-10 text-center text-black'>
                 <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
             </div>
         </footer>

@@ -8,8 +8,8 @@ const AppointmentBanner = ({ date, setDate }) => {
 
 
     return (
-        <div class="hero min-h-screen text-black">
-            <div class="hero-content flex-col lg:flex-row-reverse">
+        <div className="hero min-h-screen text-black">
+            <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src={chair} alt="dentist chair" />
                 <div>
                     <DayPicker
@@ -18,7 +18,7 @@ const AppointmentBanner = ({ date, setDate }) => {
                         onSelect={setDate}
 
                     />
-                  
+
                 </div>
             </div>
 

@@ -30,8 +30,8 @@ const Login = () => {
         if (user || gUser) {
             navigate(from, { replace: true });
         }
-    
-    }, [user,gUser,from,navigate])
+
+    }, [user, gUser, from, navigate])
 
     if (gLoading || loading) {
 

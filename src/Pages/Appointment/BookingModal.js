@@ -26,9 +26,8 @@ const BookingModal = ({ treatment, setTreatment, date }) => {
             patientName: user.displayName,
             phone: event.target.phone.value
         }
-
         // add booking api
-        fetch("http://localhost:5000/booking", {
+        fetch(`http://localhost:5000/booking`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

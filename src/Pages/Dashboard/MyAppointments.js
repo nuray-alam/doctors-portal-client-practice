@@ -33,8 +33,8 @@ const MyAppointments = () => {
                     <tbody>
                         {/* <!-- row 1 --> */}
                         {
-                            appointments.map(a => <tr>
-                                <th className='bg-white'>1</th>
+                            appointments.map((a,index) => <tr key={index}>
+                                <th className='bg-white'>{index + 1}</th>
                                 <td className='bg-white'>{a.patientName}</td>
                                 <td className='bg-white'>{a.date}</td>
                                 <td className='bg-white'>{a.slot}</td>

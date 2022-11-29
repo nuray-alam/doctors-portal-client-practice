@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { useAuthState, useSignOut } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyAppointments = () => {
     const [user] = useAuthState(auth);
     const [appointments, setAppointments] = useState([]);
+    const navigate = useNavigate();
+    const [signOut, loading, error] = useSignOut(auth);
+
     useEffect(() => {
         if (user) {
             fetch(`http://localhost:5000/booking?patient=${user.email}`, {
@@ -17,6 +21,9 @@ const MyAppointments = () => {
                     console.log(res);
                     if (res.status === 401 || res.status === 403) {
                         //Navigate to home page
+                        signOut();
+                        localStorage.removeItem('accessToken');
+                        navigate('/');
                     }
 
                     return res.json();

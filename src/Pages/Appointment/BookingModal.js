@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 
 
 
-const BookingModal = ({ treatment, setTreatment, date,refetch }) => {
+const BookingModal = ({ treatment, setTreatment, date, refetch }) => {
     const { _id, name, slots } = treatment;
     const [user, loading, error] = useAuthState(auth);
 
@@ -27,7 +27,7 @@ const BookingModal = ({ treatment, setTreatment, date,refetch }) => {
             phone: event.target.phone.value
         }
         // add booking api
-        fetch(`http://localhost:5000/booking`, {
+        fetch(`https://agile-beyond-69221.herokuapp.com/booking`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +41,7 @@ const BookingModal = ({ treatment, setTreatment, date,refetch }) => {
 
                     toast(`Appointment is set, ${formattedDate} at ${slot}`)
                 }
-                else{
+                else {
                     toast.error(`Already have an appointment on ${data.booking?.date} at ${data.booking?.slot}`)
 
                 }

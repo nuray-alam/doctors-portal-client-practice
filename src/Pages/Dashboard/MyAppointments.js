@@ -7,13 +7,20 @@ const MyAppointments = () => {
     const [appointments, setAppointments] = useState([]);
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/booking?patient=${user.email}`,{
-                method:'GET',
-                headers:{
-                    'authorization':`Bearer ${localStorage.getItem('accessToken')}`
+            fetch(`http://localhost:5000/booking?patient=${user.email}`, {
+                method: 'GET',
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
                 }
             })
-                .then(res => res.json())
+                .then(res => {
+                    console.log(res);
+                    if (res.status === 401 || res.status === 403) {
+                        //Navigate to home page
+                    }
+
+                    return res.json();
+                })
                 .then(data => setAppointments(data))
         }
 
@@ -38,7 +45,7 @@ const MyAppointments = () => {
                     <tbody>
                         {/* <!-- row 1 --> */}
                         {
-                            appointments.map((a,index) => <tr key={index}>
+                            appointments.map((a, index) => <tr key={index}>
                                 <th className='bg-white'>{index + 1}</th>
                                 <td className='bg-white'>{a.patientName}</td>
                                 <td className='bg-white'>{a.date}</td>

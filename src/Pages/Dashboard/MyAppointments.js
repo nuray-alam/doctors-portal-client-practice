@@ -36,17 +36,17 @@ const MyAppointments = () => {
 
     return (
         <div>
-            <h1 className='text-4xl'>My Appointments {appointments.length}</h1>
+            <h2 className='text-black font-bold text-2xl text-center mb-4'>My Appointments</h2>
             <div className="overflow-x-auto bg-white">
                 <table className="table w-full bg-white">
                     {/* <!-- head --> */}
                     <thead>
                         <tr>
-                            <th className='bg-white'></th>
-                            <th className='bg-white'>Name</th>
-                            <th className='bg-white'>Date</th>
-                            <th className='bg-white'>Time</th>
-                            <th className='bg-white'>Treatment</th>
+                            <th className='bg-gray-300'></th>
+                            <th className='bg-gray-300'>Name</th>
+                            <th className='bg-gray-300'>Date</th>
+                            <th className='bg-gray-300'>Time</th>
+                            <th className='bg-gray-300'>Treatment</th>
                         </tr>
                     </thead>
                     <tbody>

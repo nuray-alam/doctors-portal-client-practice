@@ -20,7 +20,7 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-const [token] = useToken(user || gUser)
+    const [token] = useToken(user || gUser)
 
     let signInError;
 
@@ -53,7 +53,8 @@ const [token] = useToken(user || gUser)
 
 
     const onSubmit = data => {
-        signInWithEmailAndPassword(data.email, data.password)
+        signInWithEmailAndPassword(data.email, data.password);
+        return;
     };
 
 

@@ -12,14 +12,14 @@ const AvailableAppointments = ({ date, setDate }) => {
     const [treatment, setTreatment] = useState(null);
 
     const { data: services, isLoading, refetch } = useQuery(['available', formattedDate], () =>
-        fetch(`https://agile-beyond-69221.herokuapp.com/available?date=${formattedDate}`).then(res => res.json())
+        fetch(`https://doctors-portal-practice.onrender.com/available?date=${formattedDate}`).then(res => res.json())
     )
     if (isLoading) {
         return <Loading></Loading>
     }
 
     // useEffect(() => {
-    //     fetch(`https://agile-beyond-69221.herokuapp.com/available?date=${formattedDate}`)
+    //     fetch(`https://doctors-portal-practice.onrender.com/available?date=${formattedDate}`)
     //         .then(res => res.json())
     //         .then(data => setServices(data))
     // }, [formattedDate])

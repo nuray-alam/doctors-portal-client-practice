@@ -27,7 +27,7 @@ const BookingModal = ({ treatment, setTreatment, date, refetch }) => {
             phone: event.target.phone.value
         }
         // add booking api
-        fetch(`https://agile-beyond-69221.herokuapp.com/booking`, {
+        fetch(`https://doctors-portal-practice.onrender.com/booking`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

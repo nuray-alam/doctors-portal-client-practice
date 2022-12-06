@@ -10,7 +10,7 @@ const Users = () => {
     const navigate = useNavigate();
     const [signOut, loading] = useSignOut(auth);
 
-    const { data: users, isLoading, error, refetch } = useQuery('users', () => fetch('https://agile-beyond-69221.herokuapp.com/user', {
+    const { data: users, isLoading, error, refetch } = useQuery('users', () => fetch('https://doctors-portal-practice.onrender.com/user', {
         method: 'GET',
         headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
